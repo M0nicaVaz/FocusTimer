@@ -7,20 +7,17 @@ function getSelectedCard(card, element) {
   return selectedCard;
 }
 
-function updateCardDisplay() {
-  let selectedSound = new Audio(this.sound);
+function activateCard() {
   let cardDiv = this.displayElement;
-
   this.isActive = this.isActive === false ? true : false;
 
   if (this.isActive === true) {
     cardDiv.classList.add('card-active');
-    selectedSound.play();
+    this.sound.play();
   } else {
     cardDiv.classList.remove('card-active');
+    this.sound.pause();
   }
-
-  console.log(this);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -53,6 +50,6 @@ document.addEventListener('DOMContentLoaded', () => {
   })();
 });
 
-export { updateCardDisplay };
+export { activateCard };
 
 // SONG IS NOT PAUSING

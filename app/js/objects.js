@@ -1,37 +1,37 @@
-import { updateCardDisplay } from './index.js';
+import { activateCard } from './index.js';
 
 const soundCards = [
   {
     name: 'forest',
-    sound: './assets/sounds/Floresta.wav',
+    sound: new Audio('./assets/sounds/Floresta.wav'),
     volume: 0,
     isActive: false,
     displayElement: '',
-    activate: updateCardDisplay,
+    activate: activateCard,
   },
   {
     name: 'rain',
-    sound: './assets/sounds/Chuva.wav',
+    sound: new Audio('./assets/sounds/Chuva.wav'),
     volume: 0,
     isActive: false,
     displayElement: '',
-    activate: updateCardDisplay,
+    activate: activateCard,
   },
   {
     name: 'coffee',
-    sound: './assets/sounds/Cafeteria.wav',
+    sound: new Audio('./assets/sounds/Cafeteria.wav'),
     volume: 0,
     isActive: false,
     displayElement: '',
-    activate: updateCardDisplay,
+    activate: activateCard,
   },
   {
     name: 'fire',
-    sound: './assets/sounds/Lareira.wav',
+    sound: new Audio('./assets/sounds/Lareira.wav'),
     volume: 0,
     isActive: false,
     displayElement: '',
-    activate: updateCardDisplay,
+    activate: activateCard,
   },
 ];
 
