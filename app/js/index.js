@@ -1,12 +1,58 @@
-(function darkMode() {
-  let themeBtn = document.querySelectorAll('.theme-btn');
+import { soundCards } from './objects.js';
 
-  for (let i = 0; i < themeBtn.length; i++) {
-    themeBtn[i].addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
+function getSelectedCard(card, element) {
+  let selectedCard = soundCards[card];
+  selectedCard.displayElement = element;
 
-      themeBtn[0].classList.toggle('hide');
-      themeBtn[1].classList.toggle('hide');
-    });
+  return selectedCard;
+}
+
+function updateCardDisplay() {
+  let selectedSound = new Audio(this.sound);
+  let cardDiv = this.displayElement;
+
+  this.isActive = this.isActive === false ? true : false;
+
+  if (this.isActive === true) {
+    cardDiv.classList.add('card-active');
+    selectedSound.play();
+  } else {
+    cardDiv.classList.remove('card-active');
   }
-})();
+
+  console.log(this);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  (function selectCard() {
+    const cardBtns = document.querySelectorAll('.card-btn');
+
+    for (let cardBtn of cardBtns) {
+      cardBtn.addEventListener('click', () => {
+        let divCard = cardBtn.parentElement;
+        let card = Number(divCard.id);
+
+        let selectedCard = getSelectedCard(card, divCard);
+
+        selectedCard.activate();
+      });
+    }
+  })();
+
+  (function updateTheme() {
+    let themeBtns = document.querySelectorAll('.theme-btn');
+
+    for (let themeBtn of themeBtns) {
+      themeBtn.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+
+        themeBtns[0].classList.toggle('hide');
+        themeBtns[1].classList.toggle('hide');
+      });
+    }
+  })();
+});
+
+export { updateCardDisplay };
+
+// SONG IS NOT PAUSING
