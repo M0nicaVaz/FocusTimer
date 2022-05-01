@@ -4,6 +4,9 @@ function getSelectedCard(card, element) {
   let selectedCard = soundCards[card];
   selectedCard.displayElement = element;
 
+  let inputVol = element.lastElementChild;
+  selectedCard.volume = inputVol;
+
   return selectedCard;
 }
 
@@ -14,10 +17,15 @@ function activateCard() {
   if (this.isActive === true) {
     cardDiv.classList.add('card-active');
     this.sound.play();
+    this.volume.addEventListener('change', () => {
+      this.sound.volume = this.volume.value / 100;
+    });
   } else {
     cardDiv.classList.remove('card-active');
     this.sound.pause();
+    this.volume.value = 50;
   }
+  console.log(this);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -30,7 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
         let card = Number(divCard.id);
 
         let selectedCard = getSelectedCard(card, divCard);
-
         selectedCard.activate();
       });
     }
@@ -52,4 +59,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
 export { activateCard };
 
-// SONG IS NOT PAUSING
+// refatorar
+//fazer timer

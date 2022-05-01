@@ -1,4 +1,4 @@
-import { activateCard } from './index.js';
+import { activateCard } from './functions.js';
 
 const soundCards = [
   {
