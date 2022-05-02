@@ -10,6 +10,7 @@
   --primary-color: #323238;
   --bg-color: #ffffff;
   --dark-bg-color: #121214;
+  --accent-clr: #02799d;
 }
 
 body {
@@ -39,7 +40,7 @@ button {
   padding: 0 2rem;
   margin: auto;
   display: flex;
-  gap: 10rem;
+  gap: 5rem;
   max-width: 82rem;
   flex-flow: row wrap;
   justify-content: center;
@@ -69,8 +70,13 @@ button {
   flex-flow: row nowrap;
   justify-content: space-between;
 }
+
 .time-controls svg {
   fill: var(--primary-color);
+}
+
+.time-btn:active > svg path {
+  fill: var(--accent-clr);
 }
 
 .cards-wrapper {
@@ -106,7 +112,7 @@ svg path {
 }
 
 .card-active {
-  --card-bg: #02799d;
+  --card-bg: var(--accent-clr);
   --primary-color: #ffffff;
 }
 

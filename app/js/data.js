@@ -1,4 +1,4 @@
-import { activateCard } from './functions.js';
+import { checkCard } from './cards.js';
 
 const soundCards = [
   {
@@ -7,7 +7,7 @@ const soundCards = [
     volume: 0,
     isActive: false,
     displayElement: '',
-    activate: activateCard,
+    activate: checkCard,
   },
   {
     name: 'rain',
@@ -15,7 +15,7 @@ const soundCards = [
     volume: 0,
     isActive: false,
     displayElement: '',
-    activate: activateCard,
+    activate: checkCard,
   },
   {
     name: 'coffee',
@@ -23,7 +23,7 @@ const soundCards = [
     volume: 0,
     isActive: false,
     displayElement: '',
-    activate: activateCard,
+    activate: checkCard,
   },
   {
     name: 'fire',
@@ -31,8 +31,15 @@ const soundCards = [
     volume: 0,
     isActive: false,
     displayElement: '',
-    activate: activateCard,
+    activate: checkCard,
   },
 ];
 
-export { soundCards };
+const buttonPressAudio = new Audio(
+  'https://github.com/maykbrito/automatic-video-creator/blob/master/audios/button-press.wav?raw=true'
+);
+const kitchenTimer = new Audio(
+  'https://github.com/maykbrito/automatic-video-creator/blob/master/audios/kichen-timer.mp3?raw=true'
+);
+
+export { soundCards, buttonPressAudio, kitchenTimer };
