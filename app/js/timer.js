@@ -96,7 +96,6 @@ export {
   pauseTimer,
   increaseMinutes,
   decreaseMinutes,
-  updateTimeDisplay,
   togglePlayPauseBtn,
   countdown,
   updateTimeDisplay,
