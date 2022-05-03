@@ -17,6 +17,7 @@ body {
   font-size: 1.6rem;
   min-height: 100vh;
   display: grid;
+  grid-template-rows: calc(100% - 5vh) 1vh;
   background-color: var(--bg-color);
 }
 
@@ -39,8 +40,9 @@ button {
   padding: 0 2rem;
   margin: auto;
   display: flex;
-  gap: 5rem;
+  gap: 2rem;
   max-width: 82rem;
+  min-width: min(80%, 22rem);
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
@@ -59,13 +61,14 @@ button {
   font-style: normal;
   font-weight: 500;
   color: var(--primary-color);
-  font-size: clamp(8rem, 10rem + 2vw, 12.7rem);
-  line-height: 14.8rem;
+  font-size: clamp(6rem, 8rem + 2vw, 12.7rem);
+  line-height: clamp(8rem, 10rem, 14.8rem);
   text-align: center;
 }
 
 .time-controls {
   display: flex;
+  width: 100%;
   flex-flow: row nowrap;
   justify-content: space-between;
 }
@@ -81,7 +84,7 @@ button {
 .cards-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 3.2rem;
+  gap: 2rem;
 }
 
 .card {
@@ -145,7 +148,8 @@ footer {
   font-family: 'Roboto', sans-serif;
   font-size: clamp(1.2rem, 1.2rem + 0.2vw, 1.4rem);
   align-self: end;
-  padding: 3.5rem 0;
+  height: 3rem;
+  padding: 0 0 1rem;
   justify-self: center;
   color: var(--dark-primary-color);
 }
@@ -175,5 +179,8 @@ footer a:hover {
   }
   .page-wrapper {
     gap: 10rem;
+  }
+  .cards-wrapper {
+    gap: 3.2rem;
   }
 }
