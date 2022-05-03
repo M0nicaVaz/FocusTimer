@@ -12,12 +12,12 @@ Click [here](https://m0nicavaz.github.io/FocusTimer) to see it live.
 
 <img src="https://github.com/M0nicaVaz/FocusTimer/blob/master/assets/images/preview.gif?raw=true" width="680px" >
 
-## Feito com:
+## Tech Stack:
 
 HTML
 CSS
 JavaScript
 
-E também com 💜 por <a href="https://www.linkedin.com/in/monica-vaz/"> Monica Vaz </a>
+and ☕ by <a href="https://www.linkedin.com/in/monica-vaz/"> Monica Vaz </a>
 
 </div>
