@@ -19,6 +19,7 @@ body {
   display: grid;
   grid-template-rows: calc(100% - 5vh) 1vh;
   background-color: var(--bg-color);
+  overflow: hidden;
 }
 
 button {
@@ -61,8 +62,8 @@ button {
   font-style: normal;
   font-weight: 500;
   color: var(--primary-color);
-  font-size: clamp(6rem, 8rem + 2vw, 12.7rem);
-  line-height: clamp(8rem, 10rem, 14.8rem);
+  font-size: clamp(10rem, 8rem + 2vw, 12.7rem);
+  line-height: clamp(10rem, 8rem + 1vw, 14.8rem);
   text-align: center;
 }
 
@@ -148,10 +149,12 @@ footer {
   font-family: 'Roboto', sans-serif;
   font-size: clamp(1.2rem, 1.2rem + 0.2vw, 1.4rem);
   align-self: end;
-  height: 3rem;
-  padding: 0 0 1rem;
   justify-self: center;
-  color: var(--dark-primary-color);
+
+  padding: 0 0 1rem;
+
+  color: var(--primary-color);
+  font-variant: small-caps;
 }
 
 footer a {
@@ -174,9 +177,6 @@ footer a:hover {
 }
 
 @media screen and (min-width: 860px) {
-  body {
-    overflow: hidden;
-  }
   .page-wrapper {
     gap: 10rem;
   }
