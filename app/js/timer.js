@@ -9,6 +9,14 @@ let seconds = defaultSec;
 
 function timerEndSound() {
   kitchenTimer.play();
+
+  let timerDisplay = document.querySelector('.timer-wrapper');
+
+  timerDisplay.classList.add('timer-shake');
+
+  setTimeout(() => {
+    timerDisplay.classList.remove('timer-shake');
+  }, 2400);
 }
 
 function countdown() {
