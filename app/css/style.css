@@ -24,7 +24,6 @@ button {
   background: transparent;
   border: none;
   cursor: pointer;
-  /* border: 1px solid red; */
   border-radius: 2.4rem;
 }
 
@@ -142,6 +141,24 @@ input[type='range']::-webkit-slider-runnable-track {
   background: transparent;
 }
 
+footer {
+  font-family: 'Roboto', sans-serif;
+  font-size: clamp(1.2rem, 1.2rem + 0.2vw, 1.4rem);
+  align-self: end;
+  padding: 3.5rem 0;
+  justify-self: center;
+  color: var(--dark-primary-color);
+}
+
+footer a {
+  text-decoration: none;
+  color: inherit;
+}
+
+footer a:hover {
+  color: var(--accent-clr);
+}
+
 .dark-mode {
   --bg-color: var(--dark-bg-color);
   --primary-color: var(--dark-primary-color);
@@ -153,6 +170,9 @@ input[type='range']::-webkit-slider-runnable-track {
 }
 
 @media screen and (min-width: 860px) {
+  body {
+    overflow: hidden;
+  }
   .page-wrapper {
     gap: 10rem;
   }

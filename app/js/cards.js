@@ -16,6 +16,7 @@ function activateCard(card) {
   cardDiv.classList.add('card-active');
 
   card.sound.play();
+  card.sound.loop = true;
 }
 
 function updateVolume(card) {
