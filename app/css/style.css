@@ -19,7 +19,6 @@ body {
   display: grid;
   grid-template-rows: calc(100% - 5vh) 1vh;
   background-color: var(--bg-color);
-  overflow: hidden;
 }
 
 button {
@@ -199,6 +198,9 @@ footer a:hover {
 }
 
 @media screen and (min-width: 860px) {
+  body {
+    overflow: hidden;
+  }
   .page-wrapper {
     gap: 10rem;
   }
